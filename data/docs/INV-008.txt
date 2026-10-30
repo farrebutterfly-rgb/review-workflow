@@ -1,0 +1,19 @@
+Leverantör: Tornedalens Elmontage AB
+Org.nr: 556650-3318
+Industrivägen 2, 957 31 Övertorneå
+
+Faktura
+
+Fakturanummer: TE-1207
+Fakturadatum: 2026-09-10
+Förfallodatum: 2026-10-10
+Valuta: SEK
+
+Elinstallation, lagerbyggnad etapp 2      48 000,00
+
+Omvänd betalningsskyldighet för byggtjänster gäller.
+Köparens momsreg.nr: SE559011223401
+
+Netto: 48 000,00
+Moms: 0,00
+Att betala: 48 000,00

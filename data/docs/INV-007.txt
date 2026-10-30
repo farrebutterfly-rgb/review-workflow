@@ -1,0 +1,13 @@
+Gävle Hydraulik AB
+Org.nr: 556209-4415
+Fakturanummer: GH-90021
+Fakturadatum: 2026-09-18
+Förfallodatum: 2026-09-08
+Valuta: SEK
+
+Byte av hydraulslang, truck 3               2 400,00
+Servicebesök, restid                          850,00
+
+Netto: 3 250,00
+Moms 25 %: 812,50
+Att betala: 4 062,50
