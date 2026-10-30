@@ -1,0 +1,23 @@
+INVOICE
+
+From: Harbour Light Instruments Ltd
+12 Quay Street, Cork, Ireland
+Company reg. IE 734412
+
+Invoice number: HLI-77310
+Invoice date: 2 September 2026
+Due date: 2 October 2026
+Currency: EUR
+
+Bill to: Västkust Laboratorier AB, Göteborg
+Customer org. no: 556998-1203
+
+Description                         Qty     Unit price      Amount
+Calibration service, pH meters        6        185.00     1,110.00
+Replacement probe PX-40              12         96.50     1,158.00
+
+Net amount: 2,268.00
+VAT 0% (reverse charge, Art. 196): 0.00
+Total due: 2,268.00
+
+Please quote the invoice number with your payment.

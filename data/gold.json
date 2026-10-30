@@ -1,0 +1,1310 @@
+{
+  "dataset": "invoices-v1",
+  "fields": [
+    "supplier",
+    "invoice_number",
+    "invoice_date",
+    "due_date",
+    "currency",
+    "net",
+    "vat",
+    "total",
+    "org_number"
+  ],
+  "documents": [
+    {
+      "doc_id": "INV-001",
+      "file": "docs/INV-001.txt",
+      "tags": [
+        "complete",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Norrsken Kontorsvaror AB",
+          "quote": "Norrsken Kontorsvaror AB",
+          "span": [
+            0,
+            24
+          ]
+        },
+        "invoice_number": {
+          "value": "2026-0418",
+          "quote": "2026-0418",
+          "span": [
+            128,
+            137
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-14",
+          "quote": "2026-09-14",
+          "span": [
+            152,
+            162
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-14",
+          "quote": "2026-10-14",
+          "span": [
+            178,
+            188
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            602,
+            605
+          ]
+        },
+        "net": {
+          "value": 6910,
+          "quote": "6 910,00",
+          "span": [
+            544,
+            552
+          ]
+        },
+        "vat": {
+          "value": 1727.5,
+          "quote": "1 727,50",
+          "span": [
+            564,
+            572
+          ]
+        },
+        "total": {
+          "value": 8637.5,
+          "quote": "8 637,50",
+          "span": [
+            585,
+            593
+          ]
+        },
+        "org_number": {
+          "value": "556712-3401",
+          "quote": "556712-3401",
+          "span": [
+            64,
+            75
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-002",
+      "file": "docs/INV-002.txt",
+      "tags": [
+        "complete-except-org",
+        "en",
+        "reverse-charge",
+        "customer-org-distractor"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Harbour Light Instruments Ltd",
+          "quote": "Harbour Light Instruments Ltd",
+          "span": [
+            15,
+            44
+          ]
+        },
+        "invoice_number": {
+          "value": "HLI-77310",
+          "quote": "HLI-77310",
+          "span": [
+            115,
+            124
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-02",
+          "quote": "2 September 2026",
+          "span": [
+            139,
+            155
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-02",
+          "quote": "2 October 2026",
+          "span": [
+            166,
+            180
+          ]
+        },
+        "currency": {
+          "value": "EUR",
+          "quote": "EUR",
+          "span": [
+            191,
+            194
+          ]
+        },
+        "net": {
+          "value": 2268,
+          "quote": "2,268.00",
+          "anchor": "Net amount",
+          "span": [
+            485,
+            493
+          ]
+        },
+        "vat": {
+          "value": 0,
+          "quote": "0.00",
+          "anchor": "VAT 0%",
+          "span": [
+            529,
+            533
+          ]
+        },
+        "total": {
+          "value": 2268,
+          "quote": "2,268.00",
+          "anchor": "Total due",
+          "span": [
+            545,
+            553
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "Supplier is Irish; only a foreign company registration number is given. The Swedish org. no on the page belongs to the customer."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-003",
+      "file": "docs/INV-003.txt",
+      "tags": [
+        "missing-due-date",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Ljungby Trätjänst AB",
+          "quote": "Ljungby Trätjänst AB",
+          "span": [
+            0,
+            20
+          ]
+        },
+        "invoice_number": {
+          "value": "10552",
+          "quote": "10552",
+          "span": [
+            84,
+            89
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-08-29",
+          "quote": "2026-08-29",
+          "span": [
+            104,
+            114
+          ]
+        },
+        "due_date": {
+          "value": null,
+          "reason": "Only payment terms (30 days net) are stated; no due date is written."
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            364,
+            367
+          ]
+        },
+        "net": {
+          "value": 14940,
+          "quote": "14 940,00",
+          "span": [
+            306,
+            315
+          ]
+        },
+        "vat": {
+          "value": 3735,
+          "quote": "3 735,00",
+          "span": [
+            327,
+            335
+          ]
+        },
+        "total": {
+          "value": 18675,
+          "quote": "18 675,00",
+          "span": [
+            354,
+            363
+          ]
+        },
+        "org_number": {
+          "value": "556431-9087",
+          "quote": "556431-9087",
+          "span": [
+            28,
+            39
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-004",
+      "file": "docs/INV-004.txt",
+      "tags": [
+        "missing-org-number",
+        "en",
+        "customer-org-distractor"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Kestrel Data Services Ltd",
+          "quote": "Kestrel Data Services Ltd",
+          "span": [
+            10,
+            35
+          ]
+        },
+        "invoice_number": {
+          "value": "KDS-2026-0193",
+          "quote": "KDS-2026-0193",
+          "span": [
+            120,
+            133
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-01",
+          "quote": "2026-09-01",
+          "span": [
+            148,
+            158
+          ]
+        },
+        "due_date": {
+          "value": "2026-09-30",
+          "quote": "2026-09-30",
+          "span": [
+            172,
+            182
+          ]
+        },
+        "currency": {
+          "value": "GBP",
+          "quote": "GBP",
+          "span": [
+            193,
+            196
+          ]
+        },
+        "net": {
+          "value": 900,
+          "quote": "900.00",
+          "anchor": "Net amount",
+          "span": [
+            391,
+            397
+          ]
+        },
+        "vat": {
+          "value": 180,
+          "quote": "180.00",
+          "span": [
+            407,
+            413
+          ]
+        },
+        "total": {
+          "value": 1080,
+          "quote": "1,080.00",
+          "span": [
+            425,
+            433
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "UK supplier; only a VAT registration number is given. The Swedish org. no belongs to the customer."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-005",
+      "file": "docs/INV-005.txt",
+      "tags": [
+        "inconsistent-totals",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Sörmlands Städ & Fönster AB",
+          "quote": "Sörmlands Städ & Fönster AB",
+          "span": [
+            0,
+            27
+          ]
+        },
+        "invoice_number": {
+          "value": "SF-3381",
+          "quote": "SF-3381",
+          "span": [
+            108,
+            115
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-05",
+          "quote": "2026-09-05",
+          "span": [
+            130,
+            140
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-05",
+          "quote": "2026-10-05",
+          "span": [
+            156,
+            166
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            175,
+            178
+          ]
+        },
+        "net": {
+          "value": 6950,
+          "quote": "6 950,00",
+          "span": [
+            296,
+            304
+          ]
+        },
+        "vat": {
+          "value": 1737.5,
+          "quote": "1 737,50",
+          "span": [
+            316,
+            324
+          ]
+        },
+        "total": {
+          "value": 8867.5,
+          "quote": "8 867,50",
+          "span": [
+            337,
+            345
+          ]
+        },
+        "org_number": {
+          "value": "559345-2210",
+          "quote": "559345-2210",
+          "span": [
+            36,
+            47
+          ]
+        }
+      },
+      "expected_findings": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    {
+      "doc_id": "INV-006",
+      "file": "docs/INV-006.txt",
+      "tags": [
+        "ambiguous-dates",
+        "en"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Brightwater Catering Oy",
+          "quote": "Brightwater Catering Oy",
+          "span": [
+            0,
+            23
+          ]
+        },
+        "invoice_number": {
+          "value": "BWC-5520",
+          "quote": "BWC-5520",
+          "span": [
+            109,
+            117
+          ]
+        },
+        "invoice_date": {
+          "value": null,
+          "reason": "03/04/2026 can be 3 April or 4 March; nothing on the page decides it."
+        },
+        "due_date": {
+          "value": null,
+          "reason": "03/05/2026 can be 3 May or 5 March; nothing on the page decides it."
+        },
+        "currency": {
+          "value": "EUR",
+          "quote": "EUR",
+          "span": [
+            174,
+            177
+          ]
+        },
+        "net": {
+          "value": 1935,
+          "quote": "1,935.00",
+          "span": [
+            302,
+            310
+          ]
+        },
+        "vat": {
+          "value": 270.9,
+          "quote": "270.90",
+          "span": [
+            320,
+            326
+          ]
+        },
+        "total": {
+          "value": 2205.9,
+          "quote": "2,205.90",
+          "span": [
+            338,
+            346
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "Finnish supplier; only a Y-tunnus is given."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-007",
+      "file": "docs/INV-007.txt",
+      "tags": [
+        "due-before-invoice",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Gävle Hydraulik AB",
+          "quote": "Gävle Hydraulik AB",
+          "span": [
+            0,
+            18
+          ]
+        },
+        "invoice_number": {
+          "value": "GH-90021",
+          "quote": "GH-90021",
+          "span": [
+            54,
+            62
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-18",
+          "quote": "2026-09-18",
+          "span": [
+            77,
+            87
+          ]
+        },
+        "due_date": {
+          "value": "2026-09-08",
+          "quote": "2026-09-08",
+          "span": [
+            103,
+            113
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            122,
+            125
+          ]
+        },
+        "net": {
+          "value": 3250,
+          "quote": "3 250,00",
+          "span": [
+            241,
+            249
+          ]
+        },
+        "vat": {
+          "value": 812.5,
+          "quote": "812,50",
+          "span": [
+            261,
+            267
+          ]
+        },
+        "total": {
+          "value": 4062.5,
+          "quote": "4 062,50",
+          "span": [
+            280,
+            288
+          ]
+        },
+        "org_number": {
+          "value": "556209-4415",
+          "quote": "556209-4415",
+          "span": [
+            27,
+            38
+          ]
+        }
+      },
+      "expected_findings": [
+        "DUE_BEFORE_INVOICE"
+      ]
+    },
+    {
+      "doc_id": "INV-008",
+      "file": "docs/INV-008.txt",
+      "tags": [
+        "reverse-charge",
+        "sv",
+        "vat-reg-distractor"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Tornedalens Elmontage AB",
+          "quote": "Tornedalens Elmontage AB",
+          "span": [
+            12,
+            36
+          ]
+        },
+        "invoice_number": {
+          "value": "TE-1207",
+          "quote": "TE-1207",
+          "span": [
+            117,
+            124
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-10",
+          "quote": "2026-09-10",
+          "span": [
+            139,
+            149
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-10",
+          "quote": "2026-10-10",
+          "span": [
+            165,
+            175
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            184,
+            187
+          ]
+        },
+        "net": {
+          "value": 48000,
+          "quote": "48 000,00",
+          "anchor": "Netto",
+          "span": [
+            339,
+            348
+          ]
+        },
+        "vat": {
+          "value": 0,
+          "quote": "0,00",
+          "anchor": "Moms:",
+          "span": [
+            355,
+            359
+          ]
+        },
+        "total": {
+          "value": 48000,
+          "quote": "48 000,00",
+          "anchor": "Att betala",
+          "span": [
+            372,
+            381
+          ]
+        },
+        "org_number": {
+          "value": "556650-3318",
+          "quote": "556650-3318",
+          "span": [
+            45,
+            56
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-009",
+      "file": "docs/INV-009.txt",
+      "tags": [
+        "missing-invoice-number",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Österlens Tryckeri AB",
+          "quote": "Österlens Tryckeri AB",
+          "span": [
+            0,
+            21
+          ]
+        },
+        "invoice_number": {
+          "value": null,
+          "reason": "Only an order number is given; the document has no invoice number."
+        },
+        "invoice_date": {
+          "value": "2026-09-22",
+          "quote": "2026-09-22",
+          "span": [
+            110,
+            120
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-22",
+          "quote": "2026-10-22",
+          "span": [
+            136,
+            146
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            155,
+            158
+          ]
+        },
+        "net": {
+          "value": 12300,
+          "quote": "12 300,00",
+          "span": [
+            264,
+            273
+          ]
+        },
+        "vat": {
+          "value": 3075,
+          "quote": "3 075,00",
+          "span": [
+            285,
+            293
+          ]
+        },
+        "total": {
+          "value": 15375,
+          "quote": "15 375,00",
+          "span": [
+            306,
+            315
+          ]
+        },
+        "org_number": {
+          "value": "556788-0135",
+          "quote": "556788-0135",
+          "span": [
+            30,
+            41
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-010",
+      "file": "docs/INV-010.txt",
+      "tags": [
+        "ambiguous-currency",
+        "dotted-dates",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Kalmar Sund Fisk & Delikatess AB",
+          "quote": "Kalmar Sund Fisk & Delikatess AB",
+          "span": [
+            0,
+            32
+          ]
+        },
+        "invoice_number": {
+          "value": "88-3104",
+          "quote": "88-3104",
+          "span": [
+            69,
+            76
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-14",
+          "quote": "14.09.2026",
+          "span": [
+            91,
+            101
+          ]
+        },
+        "due_date": {
+          "value": "2026-09-28",
+          "quote": "28.09.2026",
+          "span": [
+            117,
+            127
+          ]
+        },
+        "currency": {
+          "value": null,
+          "reason": "Only \"kr\" is written, which can mean SEK, NOK or DKK."
+        },
+        "net": {
+          "value": 2160,
+          "quote": "2 160,00",
+          "span": [
+            229,
+            237
+          ]
+        },
+        "vat": {
+          "value": 259.2,
+          "quote": "259,20",
+          "span": [
+            249,
+            255
+          ]
+        },
+        "total": {
+          "value": 2419.2,
+          "quote": "2 419,20",
+          "span": [
+            268,
+            276
+          ]
+        },
+        "org_number": {
+          "value": "559478-6620",
+          "quote": "559478-6620",
+          "span": [
+            41,
+            52
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-011",
+      "file": "docs/INV-011.txt",
+      "tags": [
+        "two-columns",
+        "discount",
+        "subtotal-distractor",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Uppsala Laboratorieglas AB",
+          "quote": "Uppsala Laboratorieglas AB",
+          "span": [
+            0,
+            26
+          ]
+        },
+        "invoice_number": {
+          "value": "ULG-60418",
+          "quote": "ULG-60418",
+          "span": [
+            71,
+            80
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-03",
+          "quote": "2026-09-03",
+          "span": [
+            106,
+            116
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-03",
+          "quote": "2026-10-03",
+          "span": [
+            132,
+            142
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            161,
+            164
+          ]
+        },
+        "net": {
+          "value": 6696,
+          "quote": "6 696,00",
+          "span": [
+            328,
+            336
+          ]
+        },
+        "vat": {
+          "value": 1674,
+          "quote": "1 674,00",
+          "span": [
+            348,
+            356
+          ]
+        },
+        "total": {
+          "value": 8370,
+          "quote": "8 370,00",
+          "span": [
+            376,
+            384
+          ]
+        },
+        "org_number": {
+          "value": "556302-8874",
+          "quote": "556302-8874",
+          "span": [
+            44,
+            55
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-012",
+      "file": "docs/INV-012.txt",
+      "tags": [
+        "us-dates",
+        "en",
+        "customer-org-distractor"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Prairie Sensor Works Inc.",
+          "quote": "Prairie Sensor Works Inc.",
+          "span": [
+            0,
+            25
+          ]
+        },
+        "invoice_number": {
+          "value": "PSW-31877",
+          "quote": "PSW-31877",
+          "span": [
+            103,
+            112
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-14",
+          "quote": "09/14/2026",
+          "span": [
+            128,
+            138
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-14",
+          "quote": "10/14/2026",
+          "span": [
+            152,
+            162
+          ]
+        },
+        "currency": {
+          "value": "USD",
+          "quote": "USD",
+          "span": [
+            173,
+            176
+          ]
+        },
+        "net": {
+          "value": 5260,
+          "quote": "5,260.00",
+          "anchor": "Net amount",
+          "span": [
+            379,
+            387
+          ]
+        },
+        "vat": {
+          "value": 0,
+          "quote": "0.00",
+          "anchor": "VAT:",
+          "span": [
+            393,
+            397
+          ]
+        },
+        "total": {
+          "value": 5260,
+          "quote": "5,260.00",
+          "anchor": "Total due",
+          "span": [
+            409,
+            417
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "US supplier; only an EIN is given. The Swedish org. no belongs to the customer."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-013",
+      "file": "docs/INV-013.txt",
+      "tags": [
+        "credit-note",
+        "negative-amounts",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Vänerns Båtvarv AB",
+          "quote": "Vänerns Båtvarv AB",
+          "span": [
+            0,
+            18
+          ]
+        },
+        "invoice_number": {
+          "value": "VB-2026-112",
+          "quote": "VB-2026-112",
+          "span": [
+            100,
+            111
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-25",
+          "quote": "2026-09-25",
+          "span": [
+            126,
+            136
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-25",
+          "quote": "2026-10-25",
+          "span": [
+            152,
+            162
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            198,
+            201
+          ]
+        },
+        "net": {
+          "value": -6000,
+          "quote": "-6 000,00",
+          "anchor": "Netto",
+          "span": [
+            273,
+            282
+          ]
+        },
+        "vat": {
+          "value": -1500,
+          "quote": "-1 500,00",
+          "span": [
+            294,
+            303
+          ]
+        },
+        "total": {
+          "value": -7500,
+          "quote": "-7 500,00",
+          "span": [
+            316,
+            325
+          ]
+        },
+        "org_number": {
+          "value": "556117-2209",
+          "quote": "556117-2209",
+          "span": [
+            27,
+            38
+          ]
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-014",
+      "file": "docs/INV-014.txt",
+      "tags": [
+        "illegible-scan",
+        "many-missing",
+        "sv"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Hälsinge Skog & Mark AB",
+          "quote": "Hälsinge Skog & Mark AB",
+          "span": [
+            41,
+            64
+          ]
+        },
+        "invoice_number": {
+          "value": null,
+          "reason": "Marked illegible in the scan."
+        },
+        "invoice_date": {
+          "value": null,
+          "reason": "Month and day are partly illegible (2026-0?-1?)."
+        },
+        "due_date": {
+          "value": null,
+          "reason": "Not present."
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            220,
+            223
+          ]
+        },
+        "net": {
+          "value": null,
+          "reason": "Not present; only the amount to pay is legible."
+        },
+        "vat": {
+          "value": null,
+          "reason": "Not present."
+        },
+        "total": {
+          "value": 21375,
+          "quote": "21 375,00",
+          "span": [
+            210,
+            219
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "Partly illegible (55#4##-#1#2)."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-015",
+      "file": "docs/INV-015.txt",
+      "tags": [
+        "held-out",
+        "da",
+        "dashed-dates"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Øresund Grafik ApS",
+          "quote": "Øresund Grafik ApS",
+          "span": [
+            0,
+            18
+          ]
+        },
+        "invoice_number": {
+          "value": "2026-731",
+          "quote": "2026-731",
+          "span": [
+            97,
+            105
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-15",
+          "quote": "15-09-2026",
+          "span": [
+            119,
+            129
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-15",
+          "quote": "15-10-2026",
+          "span": [
+            144,
+            154
+          ]
+        },
+        "currency": {
+          "value": "DKK",
+          "quote": "DKK",
+          "span": [
+            271,
+            274
+          ]
+        },
+        "net": {
+          "value": 3200,
+          "quote": "3.200,00",
+          "anchor": "Beløb ekskl. moms",
+          "span": [
+            229,
+            237
+          ]
+        },
+        "vat": {
+          "value": 800,
+          "quote": "800,00",
+          "span": [
+            248,
+            254
+          ]
+        },
+        "total": {
+          "value": 4000,
+          "quote": "4.000,00",
+          "span": [
+            262,
+            270
+          ]
+        },
+        "org_number": {
+          "value": null,
+          "reason": "Danish supplier; only a CVR number is given."
+        }
+      },
+      "expected_findings": []
+    },
+    {
+      "doc_id": "INV-016",
+      "file": "docs/INV-016.txt",
+      "tags": [
+        "held-out",
+        "sv",
+        "unlabelled-invoice-number"
+      ],
+      "fields": {
+        "supplier": {
+          "value": "Mälarö Måleri HB",
+          "quote": "Mälarö Måleri HB",
+          "span": [
+            0,
+            16
+          ]
+        },
+        "invoice_number": {
+          "value": "7731",
+          "quote": "7731",
+          "span": [
+            45,
+            49
+          ]
+        },
+        "invoice_date": {
+          "value": "2026-09-30",
+          "quote": "2026-09-30",
+          "span": [
+            63,
+            73
+          ]
+        },
+        "due_date": {
+          "value": "2026-10-30",
+          "quote": "2026-10-30",
+          "span": [
+            86,
+            96
+          ]
+        },
+        "currency": {
+          "value": "SEK",
+          "quote": "SEK",
+          "span": [
+            265,
+            268
+          ]
+        },
+        "net": {
+          "value": 10000,
+          "quote": "10 000,00",
+          "span": [
+            206,
+            215
+          ]
+        },
+        "vat": {
+          "value": 2500,
+          "quote": "2 500,00",
+          "anchor": "Moms 25",
+          "span": [
+            227,
+            235
+          ]
+        },
+        "total": {
+          "value": 12500,
+          "quote": "12 500,00",
+          "anchor": "Totalt",
+          "span": [
+            255,
+            264
+          ]
+        },
+        "org_number": {
+          "value": "969712-4410",
+          "quote": "969712-4410",
+          "span": [
+            24,
+            35
+          ]
+        }
+      },
+      "expected_findings": []
+    }
+  ]
+}
